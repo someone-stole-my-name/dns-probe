@@ -32,7 +32,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           args:
           {{- range $v := .Values.probes }}
-          - --probe='{{- $v | toJson }}'
+          - --probe={{- $v | toJson | quote }}
           {{- end }}
           ports:
             - name: http
