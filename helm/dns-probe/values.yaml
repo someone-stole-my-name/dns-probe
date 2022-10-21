@@ -1,0 +1,51 @@
+---
+replicaCount: 1
+
+image:
+  repository: ghcr.io/someone-stole-my-name/dns-probe
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: false
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+resources: {}
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+probes:
+  - name: default
+    host: google.com
+    # interval: 1s
+    # iterations: 5
+    # timeout: 5s
+    # workers: 2
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
