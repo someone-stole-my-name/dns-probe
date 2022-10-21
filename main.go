@@ -160,6 +160,8 @@ func lookup(id int, probe Probe) {
 
 		_, err := resolver.LookupIPAddr(ctx, *probe.Host)
 		if err != nil {
+			failCount++
+
 			probe.logger.Error().
 				Err(err).
 				Int("worker", id).
@@ -168,8 +170,6 @@ func lookup(id int, probe Probe) {
 			lookupFailedCounter.
 				WithLabelValues(*probe.Name, *probe.Host, probe.Timeout).
 				Inc()
-
-			failCount++
 		}
 
 		duration := time.Since(start)
