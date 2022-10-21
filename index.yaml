@@ -3,6 +3,16 @@ entries:
   dns-probe:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2022-10-21T18:09:57.162506765Z"
+    description: A Helm chart for Kubernetes
+    digest: 4d5951bbbce0d96fc94c7106cc57842804209d3f7f989f4f0d3bcc0fb63aa573
+    name: dns-probe
+    type: application
+    urls:
+    - https://github.com/someone-stole-my-name/dns-probe/releases/download/dns-probe-0.1.2/dns-probe-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2022-10-21T17:44:50.961304585Z"
     description: A Helm chart for Kubernetes
     digest: b71091f92353e7227874f242b3873b5d09756461922c3b3784cbcb7ba3e73efc
@@ -21,4 +31,4 @@ entries:
     urls:
     - https://github.com/someone-stole-my-name/dns-probe/releases/download/dns-probe-0.1.0/dns-probe-0.1.0.tgz
     version: 0.1.0
-generated: "2022-10-21T17:44:50.961310685Z"
+generated: "2022-10-21T18:09:57.162517965Z"
