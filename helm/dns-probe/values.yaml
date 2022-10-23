@@ -36,6 +36,10 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
+env:
+  # - name: GODEBUG
+  #   value: netdns=go+tcp
+
 probes:
   - name: default
     host: google.com

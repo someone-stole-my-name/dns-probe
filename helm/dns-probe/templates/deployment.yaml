@@ -34,6 +34,13 @@ spec:
           {{- range $v := .Values.probes }}
           - --probe={{- $v | toJson }}
           {{- end }}
+          {{- if .Values.env }}
+          env:
+          {{- range $v := .Values.env }}
+          - name: {{$v.name}}
+            value: {{$v.value}}
+          {{- end }}
+          {{- end }}
           ports:
             - name: http
               containerPort: 8080
