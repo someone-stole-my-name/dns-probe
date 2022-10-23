@@ -24,6 +24,8 @@ spec:
       serviceAccountName: {{ include "dns-probe.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      dnsConfig:
+        {{- toYaml .Values.dnsConfig | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

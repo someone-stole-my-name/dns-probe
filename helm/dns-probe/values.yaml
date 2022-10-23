@@ -40,6 +40,12 @@ env:
   # - name: GODEBUG
   #   value: netdns=go+tcp
 
+dnsConfig: {}
+  # options:
+  # - name: ndots
+  #   value: "2"
+  # - name: edns0
+
 probes:
   - name: default
     host: google.com
